@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "card": "/components/card/card",
-    "menu": "/components/menu/menu"
+    "menu": "/components/menu/menu",
+    "dialog": "/components/dialog/dialog"
   }
 }

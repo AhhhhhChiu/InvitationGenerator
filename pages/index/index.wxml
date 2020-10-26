@@ -12,6 +12,7 @@
 		<card />
 	</view>
 	<view style="margin-top: 30rpx">
-		<menu />
+		<menu menuItems="{{menuItems}}" bind:onMenuItemTap="onMenuItemTap" />
 	</view>
+	<dialog menuItem="{{menuItems[currentMenuItemIndex]}}"></dialog>
 </view>

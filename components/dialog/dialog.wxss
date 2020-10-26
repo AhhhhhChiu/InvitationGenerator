@@ -1,0 +1,29 @@
+.dialog-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog {
+    width: 400rpx;
+    background-color: white;
+    border-radius: 20rpx;
+    min-height: 200rpx;
+    padding: 30rpx;
+    font-size: 0.9rem;
+    color: #5a6266;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: black;
+}

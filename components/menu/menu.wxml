@@ -1,5 +1,5 @@
 <view class="menu">
-	<view wx:for="{{menuItems}}" class="menu-item">
+	<view wx:for="{{menuItems}}" wx:key="index" class="menu-item" data-index="{{index}}" catchtap="onMenuItemTap">
 		<view>
 			<text style="color: {{item.color}}" class="iconfont {{item.icon}} menu-item-icon" />
 			<text>{{item.text}}</text>

@@ -8,12 +8,37 @@ Page({
   data: {
     STATUS_BAR_HEIGHT: app.globalData.STATUS_BAR_HEIGHT,
     CUSTOM_BAR_HEIGHT: app.globalData.CUSTOM_BAR_HEIGHT,
+    dialogContent: "",
+    currentMenuItemIndex: 0,
+    menuItems: [
+      {
+        text: "个人信息",
+        icon: "icon-account",
+        color: "#F3A3A6"
+      },
+      {
+        text: "了解小报",
+        icon: "icon-collage",
+        color: "#7AA4F4",
+        content: "了解小报"
+      },
+      {
+        text: "关于小程序",
+        icon: "icon-information",
+        color: "#61D1CB",
+        content: "关于小程序"
+      }
+    ]
   },
 
   onCardTap() {
     wx.navigateTo({
       url: '/pages/post/post',
     })
+  },
+
+  onMenuItemTap(event) {
+    this.setData({ currentMenuItemIndex: event.detail });
   },
 
   /**

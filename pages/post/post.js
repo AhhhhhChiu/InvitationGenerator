@@ -26,6 +26,7 @@ Page({
     })
   },
   createCanvasBefore() {
+    // TODO: canvas有坑 第一次生成出来的是空的
     this.createCanvas(false);
     setTimeout(() => {
       this.createCanvas(true);

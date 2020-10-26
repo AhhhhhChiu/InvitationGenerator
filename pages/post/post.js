@@ -71,9 +71,9 @@ Page({
   getBackgroundImage() {
     return new Promise((resolve) => {
       wx.getImageInfo({
-        src: 'https://ahchiu.oss-cn-shenzhen.aliyuncs.com/myzhbit/post.jpg',
+        src: '/assets/post.jpg',
         success(res) {
-          resolve(res.path);
+          resolve('/' + res.path);
         }
       })
     })

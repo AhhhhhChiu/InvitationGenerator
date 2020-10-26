@@ -14,5 +14,5 @@
 	<view style="margin-top: 30rpx">
 		<menu menuItems="{{menuItems}}" bind:onMenuItemTap="onMenuItemTap" />
 	</view>
-	<dialog menuItem="{{menuItems[currentMenuItemIndex]}}"></dialog>
+	<dialog menuItem="{{menuItems[currentMenuItemIndex]}}" visible="{{visible}}" stuNumber="{{stuNumber || '还没有填写 ~'}}" bind:onOkTap="onOkTap"></dialog>
 </view>

@@ -1,4 +1,4 @@
-<view style="background: url(https://ahchiu.oss-cn-shenzhen.aliyuncs.com/myzhbit/map.jpg) center center" class="card">
+<view style="background: url({{url}}) center center" class="card">
   <view class="card-content">
     <view>线下观赛邀请函</view>
     <view class="card-content-main">2020 LOL 全球总决赛</view>

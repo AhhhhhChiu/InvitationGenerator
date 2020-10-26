@@ -1,3 +1,5 @@
+@import "/assets/animate.wxss";
+
 .dialog-wrapper {
     position: fixed;
     left: 0;
@@ -10,20 +12,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transition: all .2s ease;
 }
 
 .dialog {
-    width: 400rpx;
+    width: 560rpx;
     background-color: white;
     border-radius: 20rpx;
     min-height: 200rpx;
-    padding: 30rpx;
+    padding: 50rpx;
     font-size: 0.9rem;
     color: #5a6266;
+    word-wrap: break-word;
+    line-height: 1.5rem;
+    transition: all .2s ease;
 }
 
 .title {
     display: flex;
     justify-content: center;
     color: black;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.bottom-button {
+    width: 9rem;
+    height: 1.9rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500rpx;
+    font-size: 0.85rem;
+}
+
+.mb1rem {
+    margin-bottom: 1rem;
 }

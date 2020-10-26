@@ -7,6 +7,14 @@ Component({
     menuItem: {
       type: Object,
       default: () => {}
+    },
+    visible: {
+      type: Boolean,
+      default: false
+    },
+    stuNumber: {
+      type: [Number, String],
+      default: ""
     }
   },
 
@@ -14,13 +22,24 @@ Component({
    * 组件的初始数据
    */
   data: {
-    content: "1\n\n2\n\n3"
+    animated: "fadeInUp"
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-
+    onOkTap() {
+      this.setData({ animated: 'fadeOutDown' });
+      setTimeout(() => {
+        this.triggerEvent('onOkTap');
+        this.setData({ animated: 'fadeInUp' });
+      }, 400);
+    },
+    onPreviewTap() {
+      wx.previewImage({
+        urls: ['https://ahchiu.oss-cn-shenzhen.aliyuncs.com/myzhbit/QRCode.jpg']
+      });
+    }
   }
 })

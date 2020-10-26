@@ -1,8 +1,35 @@
-<view class="dialog-wrapper">
-	<view class="dialog">
+<view style="{{visible ? 'display: flex' : 'display: none'}}" class="dialog-wrapper" catchtap="onOkTap">
+	<view class="dialog animated {{animated}}">
 		<view class="title">
 			{{menuItem.text}}
 		</view>
-        {{content}}
+		<view wx:if="{{menuItem.text==='个人信息'}}" catchtap>
+			你的学号：{{stuNumber}}
+		</view>
+		<view wx:if="{{menuItem.text==='了解小报'}}" catchtap>
+			<view class="mb1rem">Hi 各位北理珠北鼻们</view>
+			<view class="mb1rem">作为北理珠最大非官方学生自媒体，我们一直都尽最大的努力建设一个可爱之地给大家带来欢乐，你想要知道的，我们都有。</view>
+			<view>点击下面二维码保存并且扫描叭，小北在等你找我玩。</view>
+			<view style="text-align: center" catchtap="onPreviewTap">
+				<image style="height:150rpx;width:150rpx;" src="/assets/QRCode.jpg" />
+			</view>
+			<view class="mb1rem"> 如果你想要跟我们秃头程序猿进行技术的深刻交流，也可以来小北的后台留言哦</view>
+		</view>
+		<view wx:if="{{menuItem.text==='关于小程序'}}" catchtap>
+			<view class="mb1rem">
+				点击生成专属于你的邀请函
+			</view>
+			<view class="mb1rem">
+				带上它一起到音乐小镇or和苑和小北过一个没鬼没怪只有比赛的万圣节吧！
+			</view>
+			<view class="mb1rem">
+				还有各种宅男专属皮肤泡面等好礼！10月31日约定你！
+			</view>
+		</view>
+		<view class="bottom" catchtap>
+			<view style="background: {{menuItem.color}}" class="bottom-button" catchtap="onOkTap">
+				OK炫酷
+			</view>
+		</view>
 	</view>
 </view>

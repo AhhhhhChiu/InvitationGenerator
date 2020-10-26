@@ -9,7 +9,8 @@ Page({
     STATUS_BAR_HEIGHT: app.globalData.STATUS_BAR_HEIGHT,
     CUSTOM_BAR_HEIGHT: app.globalData.CUSTOM_BAR_HEIGHT,
     dialogContent: "",
-    currentMenuItemIndex: 0,
+    currentMenuItemIndex: 1,
+    stuNumber: "",
     menuItems: [
       {
         text: "个人信息",
@@ -31,6 +32,10 @@ Page({
     ]
   },
 
+  onOkTap() {
+    this.setData({ visible: false });
+  },
+
   onCardTap() {
     wx.navigateTo({
       url: '/pages/post/post',
@@ -38,7 +43,7 @@ Page({
   },
 
   onMenuItemTap(event) {
-    this.setData({ currentMenuItemIndex: event.detail });
+    this.setData({ currentMenuItemIndex: event.detail, visible: true });
   },
 
   /**
@@ -59,7 +64,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    const stuNumber = wx.getStorageSync('stuNumber') || "";
+    this.setData({ stuNumber });
   },
 
   /**

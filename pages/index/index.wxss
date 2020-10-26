@@ -1,0 +1,14 @@
+.nickname {
+  margin-top: 100rpx;
+  font-size: 1.1rem;
+}
+
+.tips {
+  margin-top: 10rpx;
+  color: #999;
+  font-size: 0.7rem;
+}
+
+.top {
+  margin-bottom: 30rpx;
+}

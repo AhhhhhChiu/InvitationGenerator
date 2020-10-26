@@ -1,0 +1,17 @@
+<view style="padding-top:{{STATUS_BAR_HEIGHT}}px;" class="container">
+	<view style="margin-top: {{CUSTOM_BAR_HEIGHT}}px" class="top">
+		<view class="avatar">
+			<open-data type="userAvatarUrl" />
+		</view>
+		<view class="nickname">
+			<open-data type="userNickName" />
+		</view>
+		<view class="tips">2020 Take Over</view>
+	</view>
+	<view catchtap="onCardTap">
+		<card />
+	</view>
+	<view style="margin-top: 30rpx">
+		<menu />
+	</view>
+</view>

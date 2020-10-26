@@ -1,0 +1,55 @@
+@import "/assets/icon.wxss";
+
+.postCanvas {
+  width: 640px;
+  height: 1008px;
+  position: fixed;
+  top: 0;
+  left: 99999px;
+}
+
+.qrcodeCanvas {
+  width: 95px;
+  height: 95px;
+  position: fixed;
+  top: 0;
+  left: 9999px;
+}
+
+.input {
+  margin-top: 100rpx;
+  background-color: white;
+  height: 110rpx;
+  border-radius: 20rpx;
+  padding: 0 35rpx;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+}
+
+input {
+  width: 90%;
+  color: #5a6266;
+}
+
+.icon-button {
+  background-color: #53A8FF;
+  height: 45rpx;
+  width: 45rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+}
+
+.empty {
+  color: #5a6266;
+  font-size: 0.9rem;
+  height: 240rpx;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}

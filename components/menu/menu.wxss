@@ -1,0 +1,22 @@
+@import "/assets/icon.wxss";
+
+.menu {
+
+}
+
+.menu-item {
+  color: #5a6266;
+  font-size: 0.9rem;
+  background-color: white;
+  height: 110rpx;
+  margin-bottom: 30rpx;
+  padding: 0 35rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 20rpx;
+  justify-content: space-between;
+}
+
+.menu-item-icon {
+  margin-right: 30rpx;
+}

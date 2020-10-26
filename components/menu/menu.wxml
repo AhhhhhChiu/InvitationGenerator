@@ -1,0 +1,9 @@
+<view class="menu">
+	<view wx:for="{{menuItems}}" class="menu-item">
+		<view>
+			<text style="color: {{item.color}}" class="iconfont {{item.icon}} menu-item-icon" />
+			<text>{{item.text}}</text>
+		</view>
+		<text class="iconfont icon-chevron-right" />
+	</view>
+</view>

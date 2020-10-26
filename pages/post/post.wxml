@@ -1,0 +1,15 @@
+<view style="margin-top:{{STATUS_BAR_HEIGHT}}px;padding-top:{{CUSTOM_BAR_HEIGHT}}px;" class='container'>
+	<canvas canvas-id="postCanvas" class="postCanvas"></canvas>
+  <canvas canvas-id="qrcodeCanvas" class="qrcodeCanvas"></canvas>
+	<span class="iconfont icon-chevron-left avatar" bindtap="onBackTap" />
+	<view class="input">
+		<input placeholder-style="font-size: 0.9rem;" placeholder="输入学号" type="number" value="{{stuNumber}}" bindinput="stuNumberInput"></input>
+		<text class="iconfont icon-hand-pointing-right icon-button" bindtap="createCanvasBefore" />
+	</view>
+  <scroll-view scroll-y style="height: calc(100vh - {{TOP}}px - 320rpx);display: flex; align-items: center;">
+    <span wx:if="{{!canvasImagePath}}" class="empty">万圣节一起看比赛~</span>
+    <view wx:else style="display: flex; justify-content: center;">
+      <image style="width: 70%;" src="{{canvasImagePath}}" mode="widthFix" bindtap="onPreviewTap"></image>
+    </view>
+  </scroll-view>
+</view>
